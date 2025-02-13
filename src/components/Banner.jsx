@@ -23,7 +23,7 @@ export default function Banner() {
         centeredSlides={true}
         loop={true}
         autoplay={{
-          delay: 2000,
+          delay: 2500,
           disableOnInteraction: false,
         }}
         pagination={{

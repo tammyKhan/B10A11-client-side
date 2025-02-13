@@ -19,7 +19,7 @@ const Slide = ({ image, text }) => {
           <br />
           <Link
             to='/add-food'
-            className='w-full px-5 py-4 mt-4 text-sm font-medium text-white capitalize transition-colors duration-300 transform bg-red-700 rounded-md lg:w-auto hover:bg-red-500 focus:outline-none focus:bg-red-500'
+            className='btn border-2 border-red-700 text-red-700 '
           >
             Add Food
           </Link>
