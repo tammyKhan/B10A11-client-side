@@ -17,13 +17,13 @@ import bgimg3 from '../assets/images/carousel3.jpg'
 
 export default function Banner() {
   return (
-    <div className='container px-6 mx-auto'>
+    <div className=' px-6 '>
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
         loop={true}
         autoplay={{
-          delay: 2500,
+          delay: 5000,
           disableOnInteraction: false,
         }}
         pagination={{

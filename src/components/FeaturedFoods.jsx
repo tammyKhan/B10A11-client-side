@@ -15,8 +15,8 @@ const FeaturedFoods = ({ featuredFoods }) => {
   };
 
   return (
-    <div className="my-12">
-      <h2 className="text-2xl font-bold text-center mb-6">What we Offer for you</h2>
+    <div className="my-12 container px-6 mx-auto">
+      <h2 className="text-2xl font-bold text-center mb-6">Featured Food</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
         {featuredFoods.slice(0, 6).map((food) => (
           <div key={food.id} className="card bg-base-100 shadow-xl">
