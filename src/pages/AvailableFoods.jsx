@@ -5,28 +5,28 @@ import axios from "axios";
 import { AuthContext } from "../provider/AuthProvider";
 
 const AvailableFoods = () => {
-  const { user } = useContext(AuthContext); // Check if the user is logged in
+  const { user } = useContext(AuthContext); 
   const navigate = useNavigate();
   const [foods, setFoods] = useState([]);
   const [sortByExpiry, setSortByExpiry] = useState(false);
   
 
   useEffect(() => {
-    const fetchFoods = async () => {
-      try {
-        const response = await axios.get(`${import.meta.env.VITE_API_URL}/food`);
-        setFoods(response.data);
-      } catch (error) {
-        console.error("Error fetching foods:", error);
-      }
-    };
     fetchFoods();
-  }, []);
+  }, [sortByExpiry]); 
 
+  const fetchFoods = async () => {
+    try {
+      const sortQuery = sortByExpiry ? "?sortBy=expiry" : "";
+      const response = await axios.get(`${import.meta.env.VITE_API_URL}/food${sortQuery}`);
+      setFoods(response.data);
+    } catch (error) {
+      console.error("Error fetching foods:", error);
+    }
+  };
+  
   const handleSort = () => {
-    const sortedFoods = [...foods].sort((a, b) => new Date(a.expireDate) - new Date(b.expireDate));
-    setFoods(sortedFoods);
-    setSortByExpiry(!sortByExpiry);
+    setSortByExpiry(!sortByExpiry); // Sort Toggle
   };
 
   const handleViewDetails = (foodId) => {
@@ -40,7 +40,12 @@ const AvailableFoods = () => {
   return (
     <div className=" container mx-auto p-6">
       <h2 className="text-2xl flex items-center justify-center font-bold mb-4">Available Foods</h2>
-  
+      <div className="flex items-center justify-end">
+         {/*  Sorting Button */}
+       <button onClick={handleSort} className="bg-red-700 text-white px-4 py-2 rounded-md mb-4">
+        {sortByExpiry ? "Show Default Order" : "Sort by Expiry Date"}
+      </button>
+      </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
         {foods.map((food) => (
           <div key={food._id} className="card bg-base-100 shadow-xl">
