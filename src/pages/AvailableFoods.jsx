@@ -35,7 +35,7 @@ const AvailableFoods = () => {
       <h2 className="text-2xl flex items-center justify-center font-bold mb-4">Available Foods</h2>
       <div className="flex items-center justify-end">
          {/*  Sorting Button */}
-       <button onClick={handleSort} className="bg-red-700 text-white px-4 py-2 rounded-md mb-4">
+       <button onClick={handleSort} className="cursor-pointer bg-red-700 text-white px-4 py-2 rounded-md mb-4">
         {sortByExpiry ? "Show Default Order" : "Sort by Expiry Date"}
       </button>
       </div>

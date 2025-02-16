@@ -12,7 +12,7 @@ import { Autoplay, Pagination, Navigation } from 'swiper/modules'
 import Slide from './Slide'
 
 import bgimg1 from '../assets/images/carousel1.jpg'
-import bgimg2 from '../assets/images/carousel2.jpg'
+import bgimg2 from '../assets/images/carousel2.avif'
 import bgimg3 from '../assets/images/carousel3.jpg'
 
 export default function Banner() {
