@@ -13,7 +13,7 @@ const FoodCard = ({food}) => {
       <div className="card-actions justify-between my-2">
         <span className="text-xs mb-2 font-semibold">Expired Date: {food.expireDate}</span>
         <Link to={`/food-details/${food._id}`}
-          className="btn border-2 border-red-700 text-red-700 "
+          className="btn border-2 border-red-700 text-red-700 hover:bg-red-700 hover:text-white "
         >
           View Details
         </Link>

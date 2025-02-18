@@ -36,7 +36,7 @@ const FeaturedFoods = () => {
 
       <div className="text-center mt-6">
         <button
-          className="w-full px-5 py-4 mt-4 text-sm font-medium text-white capitalize transition-colors duration-300 transform bg-red-700 rounded-md lg:w-auto hover:bg-red-500 focus:outline-none focus:bg-red-500 cursor-pointer"
+         className=" btn text-white mt-5 bg-red-700 rounded-md hover:bg-white hover:text-red-700 hover:border-2 border-red-700 cursor-pointer"
           onClick={() => navigate('/available-foods')}
         >
           Show All

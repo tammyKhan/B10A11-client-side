@@ -19,7 +19,7 @@ const Slide = ({ image, text }) => {
           <br />
           <Link
             to='/add-food'
-            className='btn border-2 border-red-700 text-red-700 '
+           className="btn border-2 border-red-700 text-red-700 hover:bg-red-700 hover:text-white "
           >
             Add Food
           </Link>
