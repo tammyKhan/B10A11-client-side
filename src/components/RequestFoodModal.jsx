@@ -1,13 +1,40 @@
 import React, { useState } from "react";
 import { useContext } from "react";
 import { AuthContext } from "../provider/AuthProvider";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const RequestFoodModal = ({ food, onClose }) => {
   const [notes, setNotes] = useState("");
   const { user } = useContext(AuthContext);
+  const navigate = useNavigate();
+
+  const handleRequestFood = async () => {
+    try {
+      const { data } = await axios.post(`${import.meta.env.VITE_API_URL}/request-food`, {
+        foodId: food._id,
+        userEmail: user.email
+      });
+
+      toast.success("Food requested successfully!");
+
+      setTimeout(() => {
+        onClose(); 
+        navigate("/my-request");
+      }, 2000);
+
+  
+    } catch (error) {
+      console.error("Error requesting food:", error);
+      toast.error("Failed to request food");
+    }
+  };
 
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+      <ToastContainer></ToastContainer>
       <div className="modal modal-open">
         <div className="modal-box mt-12">
           <h2 className="text-2xl font-bold text-center">Request Food</h2>
@@ -66,10 +93,12 @@ const RequestFoodModal = ({ food, onClose }) => {
 
           <div className="modal-action">
             <button className="btn btn-outline border-2 border-red-700 text-red-700" onClick={onClose}>Cancel</button>
-            <button className="btn bg-red-700 text-white hover:opacity-60 ">Request</button>
+            <button onClick={handleRequestFood}
+            className="btn bg-red-700 text-white hover:opacity-60 ">Request</button>
           </div>
         </div>
       </div>
+      
     </div>
   );
 };
