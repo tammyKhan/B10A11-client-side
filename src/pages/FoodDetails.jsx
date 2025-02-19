@@ -2,11 +2,13 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import RequestFoodModal from "../components/RequestFoodModal";
 
 const FoodDetails = () => {
   const { id } = useParams(); //  Get Food ID from URL
   const [food, setFood] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     axios
@@ -68,9 +70,17 @@ const FoodDetails = () => {
           </div>
 
           {/* Request Button */}
-          <button  className=" btn text-white w-full mt-5 bg-red-700 rounded-md hover:bg-white hover:text-red-700 hover:border-2 border-red-700 cursor-pointer">Request Food</button>
+          <button onClick={() => setShowModal(true)}
+           className=" btn text-white w-full mt-5 bg-red-700 rounded-md hover:bg-white hover:text-red-700 hover:border-2 border-red-700 cursor-pointer">Request Food</button>
         </div>
       </div>
+       {/* Modal */}
+       {showModal && (
+        <RequestFoodModal 
+          food={food} 
+          onClose={() => setShowModal(false)} 
+        />
+      )}
     </div>
   );
 };
