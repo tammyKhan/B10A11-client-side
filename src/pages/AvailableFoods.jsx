@@ -32,7 +32,7 @@ const AvailableFoods = () => {
 
   return (
     <div className=" container mx-auto p-6">
-      <h2 className="text-2xl flex items-center justify-center font-bold mb-4">Available Foods</h2>
+      <h2 className="text-2xl flex items-center justify-center font-bold mb-4">Available Foods: {foods.length}</h2>
       <div className="flex items-center justify-end">
          {/*  Sorting Button */}
        <button onClick={handleSort} className="cursor-pointer bg-red-700 text-white hover:bg-white hover:text-red-700 hover:border-2 border-red-700 px-4 py-2 rounded-md mb-4">

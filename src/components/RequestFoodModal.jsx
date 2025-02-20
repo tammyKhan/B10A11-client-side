@@ -12,10 +12,12 @@ const RequestFoodModal = ({ food, onClose }) => {
   const navigate = useNavigate();
 
   const handleRequestFood = async () => {
+   
     try {
       const { data } = await axios.post(`${import.meta.env.VITE_API_URL}/request-food`, {
         foodId: food._id,
-        userEmail: user.email
+        userEmail: user.email,
+ 
       });
 
       toast.success("Food requested successfully!");
@@ -23,7 +25,7 @@ const RequestFoodModal = ({ food, onClose }) => {
       setTimeout(() => {
         onClose(); 
         navigate("/my-request");
-      }, 2000);
+      }, 1000);
 
   
     } catch (error) {
