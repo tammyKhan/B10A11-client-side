@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import RequestFoodModal from "../components/RequestFoodModal";
+import RequestFoodModal from "../modal/RequestFoodModal";
 
 const FoodDetails = () => {
   const { id } = useParams(); //  Get Food ID from URL
