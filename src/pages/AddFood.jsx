@@ -52,7 +52,7 @@ const AddFood = () => {
       console.log(data);
       
       toast.success("Food added successfully!");
-      setTimeout(() => navigate("/available-foods"), 1000)
+      setTimeout(() => navigate("/manage-foods"), 1000)
     } catch (error) {
       console.error("Error adding food:", error);
       toast.error("Failed to add food");

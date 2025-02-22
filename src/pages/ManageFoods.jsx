@@ -3,6 +3,7 @@ import axios from "axios";
 import { AuthContext } from "../provider/AuthProvider";
 import { toast } from "react-toastify";
 import Swal from "sweetalert2"; // Import SweetAlert2
+import { Link } from "react-router-dom";
 
 const ManageFoods = () => {
   const { user } = useContext(AuthContext);
@@ -53,8 +54,10 @@ const ManageFoods = () => {
             <thead>
               <tr className="bg-gray-200 text-sm sm:text-base">
                 <th className="border p-2">Food Name</th>
+                <th className="border p-2">Quantity</th>
                 <th className="border p-2">Pickup Location</th>
                 <th className="border p-2">Expire Date</th>
+                <th className="border p-2">Additional Notes</th>
                 <th className="border p-2">Actions</th>
               </tr>
             </thead>
@@ -62,16 +65,15 @@ const ManageFoods = () => {
               {foods.map(food => (
                 <tr key={food._id} className="text-center text-sm sm:text-base">
                   <td className="border p-2">{food.foodName}</td>
+                  <td className="border p-2">{food.quantity}</td>
                   <td className="border p-2">{food.pickupLocation}</td>
                   <td className="border p-2">{food.expireDate}</td>
+                  <td className="border p-2">{food.additionalNotes.substr(0, 25)}...</td>
                   <td className="border p-2 flex flex-col sm:flex-row justify-center gap-2">
-                    <button 
-                       
-                      className="btn bg-green-500 text-white px-3 py-1 rounded hover:bg-green-800 transition"
-                    >
+                    <Link to={`/update/${food._id}`}  className="btn bg-green-500 text-white px-3 py-1 rounded hover:bg-green-800 transition">
                       Update
-                    </button>
-                    <button 
+                    </Link>
+                    <button
                       onClick={() => handleDelete(food._id)} 
                       className="btn bg-red-700 text-white px-3 py-1 rounded hover:bg-red-900 transition"
                     >
