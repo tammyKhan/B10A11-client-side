@@ -17,32 +17,32 @@ const WhyChooseUs = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Card 1 */}
           <motion.div
-            className="p-6 bg-white rounded-lg shadow-lg"
+            className="p-6  bg-gray-800 text-white rounded-lg shadow-lg"
             whileHover={{ scale: 1.15 }}
             transition={{ duration: 0.3 }}
           >
             <h3 className="text-xl font-semibold mb-3">Reduce Food Waste</h3>
-            <p className="text-gray-600">Join our platform and help reduce food waste by sharing surplus food.Reducing food waste lessens the strain on landfills and lowers greenhouse gas emissions.</p>
+            <p className="">Join our platform and help reduce food waste by sharing surplus food.Reducing food waste lessens the strain on landfills and lowers greenhouse gas emissions.</p>
           </motion.div>
 
           {/* Card 2 */}
           <motion.div
-            className="p-6 bg-white rounded-lg shadow-lg"
+            className="p-6 bg-gray-800 text-white rounded-lg shadow-lg"
             whileHover={{ scale: 1.15 }}
             transition={{ duration: 0.3 }}
           >
             <h3 className="text-xl font-semibold mb-3">Community Driven</h3>
-            <p className="text-gray-600">Be a part of a caring community that believes in helping others.Community-driven initiatives empower local groups to take control of planning and resource allocation.</p>
+            <p className="">Be a part of a caring community that believes in helping others.Community-driven initiatives empower local groups to take control of planning and resource allocation.</p>
           </motion.div>
 
           {/* Card 3 */}
           <motion.div
-            className="p-6 bg-white rounded-lg shadow-lg"
+            className="p-6 bg-gray-800 text-white rounded-lg shadow-lg"
             whileHover={{ scale: 1.15 }}
             transition={{ duration: 0.3 }}
           >
             <h3 className="text-xl font-semibold mb-3">Easy & Free</h3>
-            <p className="text-gray-600">Share or receive food effortlessly with just a few clicks.It's surprisingly easy and completely free to access a wealth of online educational resources.</p>
+            <p className="">Share or receive food effortlessly with just a few clicks.It's surprisingly easy and completely free to access a wealth of online educational resources.</p>
           </motion.div>
         </div>
       </div>
