@@ -9,12 +9,10 @@ This project is a **Food Sharing Website** designed to **reduce food waste** by 
 ---
 
 ## 🎯 Key Features
-✅ **User Authentication**: Login & signup with **Email/Password** and **Google Auth** (Firebase).  
-✅ **JWT Security**: Secure routes using **JSON Web Tokens (JWT)**.  
+✅ **User Authentication**: Login & signup with **Email/Password** and **Google Auth** (Firebase).   
 ✅ **Food Management (CRUD)**: Users can **add, edit, delete, and view** food items.  
 ✅ **Request System**: Users can request food, and requested items are removed from availability.  
-✅ **Sorting & Searching**: Sort foods by **expiration date** and search by **food name**.  
-✅ **Dynamic Layout**: Toggle between **3-column** and **2-column** food display.  
+✅ **Sorting **: Sort foods by **expiration date**.   
 ✅ **Framer Motion Animations**: Smooth UI animations for an enhanced experience.  
 ✅ **Responsive Design**: Works on **mobile, tablet, and desktop** screens.  
 ✅ **Secure Environment Variables**: Firebase & MongoDB credentials **protected** using **.env**.  
@@ -27,13 +25,11 @@ This project is a **Food Sharing Website** designed to **reduce food waste** by 
 - ⚛️ **React.js** - Frontend UI
 - 🌊 **Tailwind CSS** & **DaisyUI** - Styling & Components
 - 🔥 **Firebase Authentication** - Login & Signup
-- 🔄 **TanStack Query** - Data Fetching & Mutations
 - 🎭 **Framer Motion** - UI Animations
 
 ### **Backend (Server-Side)**
 - 🟢 **Node.js & Express.js** - Backend Framework
-- 🍃 **MongoDB & Mongoose** - Database & ODM
-- 🔑 **JSON Web Token (JWT)** - Secure Authentication
+- 🍃 **MongoDB** - Database
 - 🔄 **Cors & dotenv** - Security & Environment Variables
 
 ---
