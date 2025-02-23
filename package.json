@@ -12,9 +12,11 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.7.2",
     "@tailwindcss/vite": "^4.0.6",
+    "aos": "^2.3.4",
     "axios": "^1.7.9",
     "date-fns": "^4.1.0",
     "firebase": "^11.3.1",
+    "framer-motion": "^12.4.7",
     "localforage": "^1.10.0",
     "match-sorter": "^8.0.0",
     "react": "^19.0.0",
